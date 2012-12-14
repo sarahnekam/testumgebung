@@ -1,0 +1,76 @@
+/* ##### LikertWidget ##### */
+div.likert_box table {
+	border-collapse: collapse;
+}
+div.likert_box table th,
+div.likert_box table td {
+	text-align: center;
+	padding: 2px;
+}
+div.likert_box table th {
+	border-bottom: solid 1px #ccc;
+}
+div.likert_box table td {
+	background-color: #ccc;
+	border: solid 1px #fff;
+}
+
+/* ##### Ende: LikertWidget ##### */
+
+
+/* ##### SmileyWidget ##### */
+
+div.smiley_box .slider {
+	margin-top: 10px;
+}
+
+div.smiley_box {
+	width: 300px;
+}
+
+div.smiley_box .header {
+	position: relative;
+	height: 15px;
+}
+
+div.smiley_box .header img {
+	position: absolute;
+}
+
+div.smiley_box img.smiley_header_1 {
+	left: 0%;
+}
+div.smiley_box img.smiley_header_2 {
+	left: 24%;
+}
+div.smiley_box img.smiley_header_3 {
+	left: 49%;
+}
+div.smiley_box img.smiley_header_4 {
+	left: 74%;
+}
+div.smiley_box img.smiley_header_5 {
+	left: 99%;
+}
+
+
+/* ##### Ende: SmileyWidget ##### */
+
+/* ##### RatingWidget ##### */
+
+span.star-rating-represent-full,
+span.star-rating-represent-empty {
+	display: block;
+	width: 16px;
+	height: 16px;
+	float: left;
+	background: url(../plugin_rating_widget/star.gif) no-repeat top left;
+}
+span.star-rating-represent-full {
+	background-position: 0 -32px;
+}
+span.star-rating-represent-empty {
+	background-position: 0 0px;
+}
+
+/* ##### Ende: RatingWidget ##### */
