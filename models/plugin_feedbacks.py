@@ -13,6 +13,9 @@ db.plugin_feedbacks_feedback.feeling.widget = lambda field,value: \
     SQLFORM.widgets.radio.widget(field,value, style='divs')
 
 
+if not session.plugin_feedbacks:
+    session.plugin_feedbacks = {"sentFeedback": 0, "time":request.now}
+
 def plugin_feedbacks():
     from gluon.tools import PluginManager
     plugins = PluginManager('feedbacks', feeling_label='Your feedback')

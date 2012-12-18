@@ -80,3 +80,19 @@ CREATE TABLE answers_stars(
     rating INTEGER
 );
 success!
+timestamp: 2012-12-14T17:22:37.703000
+CREATE TABLE plugin_feedbacks_feedback(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    feeling CHAR(512),
+    message TEXT,
+    commentdate TIMESTAMP,
+    senderip CHAR(512)
+);
+success!
+timestamp: 2012-12-17T12:25:25.480000
+CREATE TABLE mainfeedback(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    feeling CHAR(512),
+    message CHAR(512)
+);
+success!

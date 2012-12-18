@@ -3,6 +3,7 @@
 from plugin_kibit_widgets import LikertWidget
 from plugin_kibit_widgets import SmileyWidget
 from plugin_rating_widget import RatingWidget
+import plugin_feedbacks
 
 db.answers.scale.widget = LikertWidget()
 db.answers_smiley.scale.widget = SmileyWidget()
@@ -29,9 +30,16 @@ def index():
     form4 = SQLFORM(db.answers_stars)
     
     stars_results = db(db.answers_stars.id > 0).select()
+    
+    mainfeedbackform_translations = {"heading": T("KI.EVA macht mich [FEELING], weil ..."),
+                                     "feeling_choose": T("Bitte auswählen"),
+                                     "feeling_error": T("Bitte eine Emotion auswählen"),
+                                     "message_error": T("Bitte zwischen 1 und 140 Zeichen eintragen.")}
+    mainfeedbackObject = plugin_feedbacks.Mainfeedback(db, **mainfeedbackform_translations)
+    mf_form = mainfeedbackObject.form(formstyle='divs')
 
 
-    return dict(message=T('Hello World'), form=form, form2=form2, form3=form3, form4=form4, stars_results=stars_results)
+    return dict(message=T('Hello World'), form=form, form2=form2, form3=form3, form4=form4, stars_results=stars_results, mf_form=mf_form)
 
 def user():
     """
